@@ -1,1 +1,5 @@
-#LLM 실습을 통해 여러 모델들을 데이터 셋을 기반으로 Fine-Tuning 하거나 모델들을 사용하면서 실습 내용들을 저장한 Repository
+## LargeLanguageModel ##
+
+#LLM강의를 통해 진행한 실습들을 저장한 리포지토리
+
+#데이터 정제, 여러모델들에 대한 성능평가, 모델들을 기반으로 진행한 Fine-Tuning들 실습
