@@ -42,6 +42,22 @@
 
     2-4. ConversationRetrievalChain 라이브러리 사용시 정확도 떨어짐
     해결: 두 단계의 LCEL 파이프라인으로 분리하여 구현하였다.
+    <CODE>
+    ---------------------------------------------------------------------------------------------------------
+    # ConversationalRetrievalChain (Legacy)
+    qa = ConversationalRetrievalChain.from_llm(llm, retriever, memory=memory)
+    
+    # LCEL Pipeline
+    # 질문 재구성
+    history_aware_retriever = rephrase_prompt | llm | parser | retriever #두 단계의 파이프라인으로 구축
+    
+    # 문서 기반 답변
+    rag_chain = (
+        RunnablePassthrough.assign(context=history_aware_retriever | format_docs)
+        | qa_prompt
+        | llm
+    )
 
+    -------------------------------------------------------------------------------------------------------
 
   
