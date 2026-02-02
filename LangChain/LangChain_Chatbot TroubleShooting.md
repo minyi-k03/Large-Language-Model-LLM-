@@ -10,17 +10,17 @@
     
     2-2. Chain 객체를 함수처럼 호출하거나 run()함수 사용시 오류 발생
     해결 : LangChain의 모든 Runnable 객체를 invoke()함수로 통일하여 사용하였다.
-    <CODE>
-   -------------------------------------------------------------------------------------------------------
 
+    '''
+    <CODE>
      # Legacy 방식
       response = chain.run("이 문장을 번역해줘")
 
      # LCEL 표준 방식
      response = chain.invoke({"input": "이 문장을 번역해줘"})
      print(response.content) 
-
-  ---------------------------------------------------------------------------------------------------------
+     
+    '''
    
     2-3. 기존 실습에서 사용하는 Conversation, ConversationBufferMemory 라이브러리 충돌
     해결 : 메모리 객체를 체인 내부에 숨기는 대신 RunnableWithMessageHistory를 사용하여 외부에서 관리하도록 변경
