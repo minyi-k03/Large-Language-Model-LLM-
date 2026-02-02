@@ -7,6 +7,7 @@
   ## 2. 오류 발생 내역 ##
     2-1. 패키지 의존성 및 설치 오류
     해결 : LangChain 라이브러리가 비대해짐에 따라 core, community, partner로 분리해서 설치하여 경로를 수정하였다
+    
 
     2-2. Chain 객체를 함수처럼 호출하거나 run()함수 사용시 오류 발생
     해결 : LangChain의 모든 Runnable 객체를 invoke()함수로 통일하여 사용하였다.
