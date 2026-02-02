@@ -8,10 +8,10 @@
   변경점 : 기존에 langchain.prompt에서 FewShotPromptTemplate등을 가져오던 방식은 현재 colab환경 버젼과 맞지 않아 수정하였다.
 
   python'''
-  # [Legacy]
+  #[Legacy]
   from langchain.prompts import PromptTemplate, FewShotPromptTemplate
 
-  # [Modern (v0.2+)]
+  #[Modern (v0.2+)]
   from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate
   '''
 
