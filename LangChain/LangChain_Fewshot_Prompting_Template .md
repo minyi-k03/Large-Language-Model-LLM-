@@ -4,7 +4,7 @@
   학습목표 : LLM에게 임의의 예시 제공을 통한 답변 품질 향상
 
 ## 2. 주요변경점
-  2-1: 프롬프트 템플릿 라이브러리 패키지 경로 변경
+  2-1: **프롬프트 템플릿 라이브러리 패키지 경로 변경**
   변경점 : 기존에 langchain.prompt에서 FewShotPromptTemplate등을 가져오던 방식은 현재 colab환경 버젼과 맞지 않아 수정하였다.
 
   python'''
@@ -18,7 +18,7 @@
   
   '''
 
-  2-2 : Semantic Selector 의존성 분리
+  2-2 : **Semantic Selector 의존성 분리**
   문제점 : SemanticSimilarityExampleSelector 사용시 내부에서 사용하느 VectorDB 와 Embedding Model의 경로 변경으로 인한 ImportError가 연쇄적으로 발생
   해결책 : LangChain단일 패키지 설치가 아닌 기능별 전용 패키치들 (Langchain_chroma, Langchain_openai)를 설치해서 연결하였다
 
