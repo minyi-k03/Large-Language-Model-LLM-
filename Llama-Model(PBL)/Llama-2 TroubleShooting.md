@@ -1,19 +1,19 @@
 # Llama-2 Model을 KorQuad Data set을 가지고 학습 중 Gradient Explosion으로 인한 문제 보고서 #
 
-#1. 문제 발생 원인
+## 1. 문제 발생 원인
   #1-1. Llama-2-7B 모델을 KorQuad Data set에서 약(220개)일부를 가지고 Fine-Tuning 중 15Epoch 시점부터 Loss 값이 비정상적으로 변함
   #1-2. 환경: Google Colab T4 GPU AutoTrain Advanced
   #1-3. 증상: 학습 로그에서 grad_norm의 값이 Nan으로 뜨고 Loss는 0.0이었다
 
 
-#2. 원인 발생 이유
+## 2. 원인 발생 이유
   #2-1: 과도한 epoch로 인한 발생 당시 Epoch는 40회였다
   #2-2: 높은 Learning Rate 당시 Learning Rate는 2e-4였다
 
 
-#3. 해결방안
+## 3. 해결방안
   #3-1: 기존에 높은 epoch를 40 -> 10 회로 데이터 셋에 대한 규모를 생각하여서 Epoch 횟수를 줄였다
   #3-2: Learning Rate를 2e-4 -> 1e-4로 줄였다 가중치 업데이트에 대한 보폭을 줄 수렴 안전성을 확보 하였다.
 
-#4. 결과
+## 4. 결과
   #4-1: Parameter(Learning Rate, Epoch)수정 후 Nan 발산 없이 Loss값이 안정적으로 수렴했음을 확인했다
