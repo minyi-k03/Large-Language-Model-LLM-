@@ -24,6 +24,7 @@
   python'''
   
   #Legacy Code
+  
   from langchain.prompts.example_selector import SemanticSimilarityExampleSelector
   from langchain.vectorstores import Chroma
   from langchain.embeddings import OpenAIEmbeddings
