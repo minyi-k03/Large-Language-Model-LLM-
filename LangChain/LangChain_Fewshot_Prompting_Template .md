@@ -9,11 +9,11 @@
 
   python'''
   
-  #Legacy
+  #[Legacy]
   
   from langchain.prompts import PromptTemplate, FewShotPromptTemplate
 
-  #Modern (v0.2+)
+  #[Modern (v0.2+)]
   from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate
   
   '''
