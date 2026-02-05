@@ -5,10 +5,29 @@
 
 ## 2. Tech Stack
   **FrameWork** : LangChain
+  
   **LLM**:OpenAI Gpt-4o-mini
+  
   **Support LLM**:Gemini
+  
   **Vector DB**:Chroma DB
+  
   **Embedding**:OpenAIEmbeddings
+
+## 3. Trouble Shooting
+  **3-1**:SQLite3 버전 호환성 문제
+
+  **원인**: Colab버젼과 현재 SQLite 버전 호환성 문제 발생
+
+  **해결**: Gemini를 통해 pysqlite-3 binary를 설치하여 런타임시 강제로 모듈을 교체하였다.
+
+  '''
+  
+  __import__('pysqlite3')
+  import sys
+  sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+  
+  '''
 
 
 
