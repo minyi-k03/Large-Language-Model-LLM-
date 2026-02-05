@@ -25,9 +25,16 @@
   
   __import__('pysqlite3')
   import sys
+  
   sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
   
   '''
+
+  **3-2**:LangChain 패키지 구조 변경
+
+  **원인**:기존 강의 실습과 현재 랭체인 모듈의 버전이 달라 오류 발생
+
+  **해결**:새로운 모듈 langchain_community, langchain_openai으로 import하는 부분을 수정하였
 
 
 
