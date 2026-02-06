@@ -48,12 +48,12 @@ metadata_field_info = [
 
 document_content_description = "다양한 IT 기기의 제품명, 카테고리, 가격 및 사용자 평점 정보가 담긴 데이터셋"
 
-  '''
+  ```
 
 ## Main-Tech
   **Query Constructor and Self-Query**
   
-  '''
+  ```python
   **자연어를 구조화된 필터로 변환**
   
   retriever = SelfQueryRetriever(
@@ -64,7 +64,7 @@ document_content_description = "다양한 IT 기기의 제품명, 카테고리, 
       
       verbose=True
   )
-  '''
+  ```
 
 ## TroubleShooting
 
