@@ -60,6 +60,8 @@ class RouteQuery(BaseModel):
   **해결**:OpenAI Embedding 객체를한번만 생성하여 두 개의 Retriever가 공유하도록 최적화하였다
 
 
+
+
 # LangChain_JudgeGpt_Multiple_Retriever
 
 ## Project - Overview
