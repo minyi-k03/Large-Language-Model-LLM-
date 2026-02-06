@@ -20,50 +20,33 @@
 
 ## MetaData-Schema 
 
-  '''  
-  from langchain.chains.query_constructor.base import AttributeInfo
+ ```python
+from langchain.chains.query_constructor.base import AttributeInfo
 
-  metadata_field_info = [
-  
-      AttributeInfo(
-      
-          name="ProductName",
-          
-          description="상품의 전체 이름 (예: 갤럭시 북4 Pro, 로지텍 MX Master 3S)",
-          
-          type="string",
-          
-      ),
-      AttributeInfo(
-      
-          name="MainCategory",
-          
-          description="상품의 대분류 카테고리 (예: 노트북, 휴대폰, 키보드, 마우스)",
-          
-          type="string",
-      ),
-      
-      AttributeInfo(
-      
-          name="Price",
-          
-          description="상품의 현재 판매 가격 (단위: 원)",
-          
-          type="integer",
-          
-      ),
-      AttributeInfo(
-      
-          name="ReviewScore",
-          
-          description="사용자들이 남긴 평점의 평균 (1점에서 5점 사이)",
-          
-          type="integer",
-          
-      ),
-  ]
-  
-  document_content_description = "다양한 IT 기기의 제품명, 카테고리, 가격 및 사용자 평점 정보가 담긴 데이터셋"
+metadata_field_info = [
+    AttributeInfo(
+        name="ProductName",
+        description="상품의 전체 이름 (예: 갤럭시 북4 Pro, 로지텍 MX Master 3S)",
+        type="string",
+    ),
+    AttributeInfo(
+        name="MainCategory",
+        description="상품의 대분류 카테고리 (예: 노트북, 휴대폰, 키보드, 마우스)",
+        type="string",
+    ),
+    AttributeInfo(
+        name="Price",
+        description="상품의 현재 판매 가격 (단위: 원)",
+        type="integer",
+    ),
+    AttributeInfo(
+        name="ReviewScore",
+        description="사용자들이 남긴 평점의 평균 (1점에서 5점 사이)",
+        type="integer",
+    ),
+]
+
+document_content_description = "다양한 IT 기기의 제품명, 카테고리, 가격 및 사용자 평점 정보가 담긴 데이터셋"
 
   '''
 
