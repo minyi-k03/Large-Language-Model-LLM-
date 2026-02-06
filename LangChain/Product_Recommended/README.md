@@ -54,7 +54,7 @@ document_content_description = "다양한 IT 기기의 제품명, 카테고리, 
   **Query Constructor and Self-Query**
   
   ```python
-  **자연어를 구조화된 필터로 변환**
+  #자연어를 구조화된 필터로 변환
   
   retriever = SelfQueryRetriever(
   
