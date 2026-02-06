@@ -19,12 +19,10 @@
 
 
 ## MetaData-Schema 
-  '''
-  
+
+  '''  
   from langchain.chains.query_constructor.base import AttributeInfo
 
-  **1. 각 메타데이터 필드의 의미와 데이터 타입을 정의합니다.**
-  **이 정보는 LLM이 쿼리를 생성할 때 '어떤 필드로 필터링할지' 결정하는 근거가 됩니다.**
   metadata_field_info = [
   
       AttributeInfo(
@@ -64,8 +62,6 @@
           
       ),
   ]
-  
-  **2. 데이터셋 전체에 대한 설명을 정의합니다.**
   
   document_content_description = "다양한 IT 기기의 제품명, 카테고리, 가격 및 사용자 평점 정보가 담긴 데이터셋"
 
