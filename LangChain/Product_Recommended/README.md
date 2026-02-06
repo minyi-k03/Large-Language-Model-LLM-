@@ -20,6 +20,7 @@
 
 ## MetaData-Schema 
   '''
+  
   from langchain.chains.query_constructor.base import AttributeInfo
 
   **1. 각 메타데이터 필드의 의미와 데이터 타입을 정의합니다.**
