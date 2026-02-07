@@ -1,4 +1,4 @@
-# LangCahin_Fewshot_Prompt_Template
+# LangChain_Fewshot_Prompt_Template
 
 ## Project - Overview
   **Purpose** : LLM에게 몇가지 Few-shot Example를 제공하여 모델이 사용자의 의도와 형식을 잘 이해하도록 유도하는 실습을 진행하였다.
