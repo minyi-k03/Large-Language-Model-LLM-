@@ -16,7 +16,7 @@
 
   **Query Analysis**:Query Decomposition, Metadata Filtering, Pydantic
 
-## Main-Code Highlight
+## HighLight - Code
   ```python
   from pydantic import BaseModel, Field
   from typing import Optional
