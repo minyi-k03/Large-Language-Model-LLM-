@@ -15,7 +15,9 @@
 
 ## HighLight-Code
   **1. 데이터 전처리 및 동적 패딩(Dynamic Padding)**
-  두 문장을 한 번에 토크나이징하고, 'DataCollatorWithPadding'을 통해 각 Batch 내에서 가장 긴 문장에 맞춰 패딩을 적용하여 불필요한 연산    량을 줄인다.
+  
+  두 문장을 한 번에 토크나이징하고, 'DataCollatorWithPadding'을 통해 각 Batch 내에서 가장 긴 문장에 맞춰 패딩을 적용하여 불필요한 연산량을 줄인다.
+  
   ```python
   def tokenize_function(examples):
       # 두 문장을 입력받아 토크나이징 진행 (max_length는 모델 기본값 따름)
@@ -26,6 +28,7 @@
   ```
 
   **2. P-Tuning Model Setting**
+  
   전체 파라미터를 업데이트하는 대신, 연속적인 가상 프롬프트 토큰(Virtual Toekns)을 입력 시퀀스에 추가하고 해당 프롬프트 인코더의 가중치    만 학습시킨다. 전체 파라미터의 0.67%만 학습에 적용한다
   ```python
   from peft import PromptEncoderConfig, get_peft_model
