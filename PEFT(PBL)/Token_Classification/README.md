@@ -59,7 +59,8 @@
   ```
 
 ## TroubleShooting 
- **(Problem 1) 데이터셋 구조 변경으로 인한 KeyError**
+ **(Problem 1) 데이터셋 구조 변경으로 인한 KeyError** 
+  
  **(원인)** : 기존에 사용하던 tner/bionlp2004 데이터 셋의 지원이 종료되어 ncbi-disease 데이터 셋으로 대체하였으나, 타겟 레이블 컬럼명이 tags에서 ner_tags로 구성되어 있었음
  
  **(해결)** : 기존 태그명 tags가 아닌 ner_tags로 변경하여 레이블 매핑을 하였다.
