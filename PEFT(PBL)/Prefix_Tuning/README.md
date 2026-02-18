@@ -6,14 +6,15 @@
   **DataSet** : 'Financial_phrasebank' 사용
 
 ## Tech-Stack
-  **Language** : Python
+ **Language** : Python
 
-  **FrameWork** : PyTorch, Hugging Face(Transformers, PEFT, Datasets)
+ **FrameWork** : PyTorch, Hugging Face(Transformers, PEFT, Datasets)
 
-  **Base Model** : T5-Large (Text-to-Text Transfer Transforemr)
+ **Base Model** : T5-Large (Text-to-Text Transfer Transforemr)
 
-  **Metrics** : Accuracy, Perplexity (PPL)
+ **Metrics** : Accuracy, Perplexity (PPL)
 
+ **Assist LLM** : Gemini 
 
 ## HighLight-Code
   **1. Seq2Seq 모델을 위한 데이터 매핑**
