@@ -5,14 +5,15 @@
 
 
 ## Tech-Stack
-  **Laguage** : Python
+ **Laguage** : Python
+ 
+ **FrameWork** : PyTorch, Hugging Face(Transformers, PEFT, Datasets)
+ 
+ **Base Model** : bigscience/bloomz-560m (Casual LM)
 
-  **FrameWork** : PyTorch, Hugging Face(Transformers, PEFT, Datasets)
+ **Metrics** : Loss, Perplexity (PPL)
 
-  **Base Model** : bigscience/bloomz-560m (Casual LM)
-
-  **Metrics** : Loss, Perplexity (PPL)
-
+ **Assist LLM** : Gemini
 
 ## HightLight-Code
   **1. 프롬프트 템플릿 화 및 토크나이징**
