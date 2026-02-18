@@ -6,6 +6,15 @@
   **Dataset** : KorQuad, DataAugmentation 기법이 적용된 KorQuad_Prompt_da 사용
 
 
+## Tech-Stack
+ **Langague** : Python
+
+ **FrameWork** : HuggingFace(Transformers, AutoTrain Advanced, PEFT, Bitsandbytes)
+
+ **Base Model** : `TinyPixel/Llama-2-7B-bf16-sharded`
+
+ **Assist LLM** : Gemini
+
 ## HighLight-Code
   **1. AutoTrain CLI 기반 학습 시작**
 
