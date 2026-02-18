@@ -52,11 +52,26 @@
   ```
 
 ## TroubleShooting
-  **(Problem 1) 패키지 의존성 충돌 및 버전 오류**\
+  **(Problem 1) 패키지 의존성 충돌 및 버전 오류**
   
   **(원인)** : AutoTrain은 최신 버전의 Transformer와 PEFT에 의존하나, 런타임에 구버전이 같이 섞여있다.
 
-  **(해결)** : 강제 uninstall을 통해 기존 라이브러리를 완전히 제거한 후, 필수 라이브러리들을 모두 최신 버전으로 재설치하여 런타임 환경을 초기화 항
+  **(해결)** : 강제 uninstall을 통해 기존 라이브러리를 완전히 제거한 후, 필수 라이브러리들을 모두 최신 버전으로 재설치하여 런타임 환경을 초기화 하였다
 
-# 학습된 파인튜닝 가중치(Adapter) 병합
-model = PeftModel.from_pretrained(base_model, "llama2-korquad-finetuning-da")
+ **(Problem 2) 과도한 Epoch및 높은 Learning Rate로 인한 문제 발생**
+
+ **(현상)** : Llama-2-7B Model을 KorQuad 데이터 셋에 약 220개 일부를 가지고 Fine-Tuning 실습중 15 Epoch 지점부터 Loss값이 비정상적으로 변하였다, grad_norm 값이 Nan으로 뜨며 Loss값은 0.0이었다.
+
+ **(원인)** : Epoch = 40, Learning_Rate = 2e-4 였다.
+
+ **(해결)** : 기존 Epoch를 40 -> 10으로 변경하여 데이터 셋에 대한 규모를 생각하여 Epoch 횟수를 줄이고, Learning Rate를 2e4 -> 1e-4로 줄여서 Gradient에 대한 보폭을 줄여서 수렴 안정성을 확보하여 해결하였다.
+
+ **(Problem 3) AutoTrain 훈련 중 GPU 라이브러리 경로 인식 실패**
+
+ **(원인)** : Colab 또는 특정 Linux 환경에서 NVIDIA 드라이버 라이브러리 경로가 기본 환경 변수(LD_LIBRARY_PATH)에 매핑되어 있지 않았다.
+
+ **(해결)** : AutoTrain 명령어 실행 직전에 LD_LIBRARY_PATH=/usr/lib64-nvidia:/usr/local/cuda/lib64:$LD_LIBRARY_PATH를 강제로 주입하여 시스템이 GPU 라이브러리를 정상적으로 참조하도록 해결하였다.
+ 
+
+ 
+ 
