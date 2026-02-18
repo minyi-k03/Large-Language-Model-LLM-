@@ -36,7 +36,7 @@
   )
   ```
 
-**2. Image-Text 복합 프롬프트 추론 함수
+**2. Image-Text 복합 프롬프트 추론 함수**
 
 이미지 데이터(PIL.Image)와 Korean Query를 Llama-3.2 Vision 규격에 맞게끔 결합하여 텍스트를 생성하는 모듈 구성
 
