@@ -16,6 +16,7 @@
 
 ## HightLight-Code
   **1. 프롬프트 템플릿 화 및 토크나이징**
+  
    Casual LM이 분류 작업을 문장 생성 태스크로 이해할 수 있도록, 레이블을 하나의 프롬프트 문장(예: `Tweet text : {내용} Label : {정답}`)으로 결합하였다.
 
    모델이 오직 정답 토큰을 예측하는 부분에서만 Loss를 계산하도록 입력 텍스트 부분을 -100으로 마스킹 처리하였다.
@@ -29,6 +30,7 @@
   ```
 
   **2. Prompt-Tuning Initializing**
+  
   분류 태스크를 명확하게 지시하는 초기 텍스트(Prompt_tuning_init_text)를 제공하여 가상의 프롬프트 임베딩을 생성한다. 기존 모델의 가중치는 완전히 동결하고, 프롬프트 임베딩만을 업데이트한다.
 
   ```python
@@ -48,6 +50,7 @@
   ```
 
   **3. Model Inference**
+  
   학습된 모델에 새로운 트위터 문장을 입력하여, 텍스트의 성격이 Complaint인지 No Complaint인지 텍스트 생성 방식으로 예측한다.
   ```python
   inputs = tokenizer(
