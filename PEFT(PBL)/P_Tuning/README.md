@@ -12,6 +12,7 @@
 
   **Metrics** : Accuracy, F1 score
 
+  **Assist LLM** : Gemini
 
 ## HighLight-Code
   **1. 데이터 전처리 및 동적 패딩(Dynamic Padding)**
