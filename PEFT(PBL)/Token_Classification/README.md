@@ -5,16 +5,18 @@
 
 
 ## Tech-Stack
-  **Langague** : Python
+ **Langague** : Python
   
-  **FrameWork** : Hugging Face(Transformer, PEFT, Dataset, Evaluate)
+ **FrameWork** : Hugging Face(Transformer, PEFT, Dataset, Evaluate)
   
-  **Base Model** : roberta-base
+ **Base Model** : roberta-base
   
-  **Dataset** : ncbi-disease (BioNLP 대체 데이터 셋)
+ **Dataset** : ncbi-disease (BioNLP 대체 데이터 셋)
   
-  **Metrics** : seqeval(Precision, Recall, F1, Accuracy)
-
+ **Metrics** : seqeval(Precision, Recall, F1, Accuracy)
+ 
+ **Assist LLM** : Gemini
+  
 
 ## HighLight-Code
   **1. 레이블 정렬 및 토크나이징**
