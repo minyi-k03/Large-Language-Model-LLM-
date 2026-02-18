@@ -17,6 +17,7 @@
 
 ## HighLight-Code
   **1. Seq2Seq 모델을 위한 데이터 매핑**
+  
   T5 Model은 모드 문제를 텍스트 생성 방식으로 풀기 때문에, 분류 문제의 정답(0,1,2)을 직접적인 텍스트(Negative, Netral, Positive)로 변환하여 학습 타겟으로 설정
   ```python
   # 정답 레이블을 텍스트로 변환
@@ -29,6 +30,7 @@
   ```
 
   **2. Loss Optimization을 위한 패딩 처리**
+  
   정답(Label) 시퀀스의 패딩 토큰을 -100으로 변환하여,  Pytorch의 손실 함수가 불필요한 패딩 영역의 오차를 계산하지 않도록 설정
   ```python
   # pad_token_id를 -100으로 변경하여 Loss 계산에서 제외
@@ -39,6 +41,7 @@
   ```
 
   **3. Prefix-Tuning Architecture**
+  
   모델의 모든 파라미터를 동결하고, 각 Transformer Layer 앞에 가상의 프롬프트 토큰(Prefix) 20개를 덧붙여서 해당 파라미턴만 학습
   ```python
   from peft import PrefixTuningConfig, TaskType
