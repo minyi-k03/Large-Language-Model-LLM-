@@ -60,11 +60,14 @@
 
 ## TroubleShooting 
  **(Problem 1) 데이터셋 구조 변경으로 인한 KeyError**
- **(원인)** : 기존에 사용하던 tner/bionlp2004 데이터 셋의 지원이 종료되어 ncbi-disease 데이터 셋으로 대체하였으나, 타겟 레이블 컬럼명이 tags에서 ner_tags로 구성되어 있었음\
+ **(원인)** : 기존에 사용하던 tner/bionlp2004 데이터 셋의 지원이 종료되어 ncbi-disease 데이터 셋으로 대체하였으나, 타겟 레이블 컬럼명이 tags에서 ner_tags로 구성되어 있었음
+ 
  **(해결)** : 기존 태그명 tags가 아닌 ner_tags로 변경하여 레이블 매핑을 하였다.
 
  **(Problem2)**:모델 훈련 파라미터 세팅 시 evaluation_strategy 관련 Deprecation Warning 혹은 오류 발생
+ 
  **(원인)**: Hugging Face Transformers 라이브러리가 업데이트되면서 기존의 evaluation_strategy인자명이 변경됨
+ 
  **(해결)**:TrainingArguments 선언 시 인자명을 최신 API 명세에 맞추어 eval_strategy = "epoch" 형태로 변경하였다.
 
 
