@@ -11,6 +11,8 @@
 
   **Techniques** : Input/Output Moderation, Concurrent Task Execution
 
+  **Assist LLM** : Gemini
+
 
 ## HighLight - Code
   **1. Async 기반 Guardrail 검사**
