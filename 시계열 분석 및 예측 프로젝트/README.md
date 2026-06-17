@@ -1,4 +1,4 @@
-# 📰 Model Training: NLI 기반 가짜뉴스 판독 모델 파인튜닝
+# Model Training: NLI 기반 가짜뉴스 판독 모델 파인튜닝
 
 ## Project-Overview
 * **Purpose** : 한국어 기사 본문(Premise)과 제목(Hypothesis) 간의 논리적 모순을 판별하여 가짜뉴스를 탐지하기 위해, 최대 4096 토큰을 지원하는 `monologg/kobigbird-bert-base` 모델을 이진 분류(참/거짓) Task에 맞게 파인튜닝하는 실습 진행.
@@ -24,5 +24,8 @@ df_remaining = df.drop(df_true_to_augment.index)
 
 # 남은 데이터 8000개 + 변형된 데이터 2000개 결합 (총 10,000개, 5000:5000 완벽 유지)
 df_augmented = pd.concat([df_remaining, df_true_to_augment], ignore_index=True)
+
+
+**2. 메모리 최적화를 위한 동적 패딩 및 혼합 정밀도(AMP) 학습 **
 
 
