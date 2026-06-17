@@ -46,6 +46,11 @@ scaler.scale(loss).backward()
 ```
 
 ## TroubleShooting
+**(Problem 1) Colab T4 GPU VRAM OOM 현상**
+(현상): 기사 전문을 커버하기 위해 1024의 max_length를 설정할 시 고정 길이 패딩과 일반적인 모델 구조에서는 Colab T4 GPU 환경에서 OOM 에러가 발생.
+
+(해결) : 최대 4096 토큰을 지원하는 BigBird 아키텍처 모델(monologg/kobigbird-bert-base)을 채택하고, DataCollatorWithPadding을 통해 배치 내 최대 길이에 맞춰 동적으로 패딩을 조절하였다. 추가적으로 GradScaler('cuda')를 이용한 혼합 정밀도 연산을 적용하여 메모리 사용량을 획기적으로 줄여 해결하였다.
+
 
 
 
