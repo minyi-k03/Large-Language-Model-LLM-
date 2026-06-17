@@ -21,6 +21,12 @@ df_true_to_augment['hypothesis'] = df_true_to_augment['hypothesis'].apply(augmen
 
 # 원본 데이터 프레임에서 증강할 대상이었던 원본 2000개를 삭제
 df_remaining = df.drop(df_true_to_augment.index)
+```
+
+
+
+
+
 
 # 남은 데이터 8000개 + 변형된 데이터 2000개 결합 (총 10,000개, 5000:5000 완벽 유지)
 df_augmented = pd.concat([df_remaining, df_true_to_augment], ignore_index=True)
