@@ -66,7 +66,7 @@ scaler.scale(loss).backward()
 **(해결)** : torch.clamp 함수를 사용하여 input_ids를 모델의 vocab_size - 1 이내로 강제하고, labels 역시 min=0, max=1로 고정하는 강력한 방어 코드를 학습 및 검증 루프 내에 삽입하여 에러를 원천 차단하였다.
 
 
-## FrontEnd & Serving: SLM-LLM 하이브리드 가짜뉴스 팩트체크 웹 서비스
+# FrontEnd & Serving: SLM-LLM 하이브리드 가짜뉴스 팩트체크 웹 서비스
 
 ## Project-Overview
 
