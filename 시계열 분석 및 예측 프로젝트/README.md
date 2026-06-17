@@ -21,17 +21,33 @@ df_true_to_augment['hypothesis'] = df_true_to_augment['hypothesis'].apply(augmen
 
 # 원본 데이터 프레임에서 증강할 대상이었던 원본 2000개를 삭제
 df_remaining = df.drop(df_true_to_augment.index)
-```
-
-
-
-
-
 
 # 남은 데이터 8000개 + 변형된 데이터 2000개 결합 (총 10,000개, 5000:5000 완벽 유지)
 df_augmented = pd.concat([df_remaining, df_true_to_augment], ignore_index=True)
 
 ```
+
+
+**2. 1:1 메모리 최적화를 위한 동적 패딩 및 혼합 정밀도(AMP) 학습**
+고정 길이 패딩으로 인한 메모리 낭비를 막기 위해 DataCollatorWithPadding을 사용하고, 최신 autocast와 GradScaler API를 사용하여 T4 GPU 환경에서 학습 속도와 메모리를 최적화하였다.
+```python
+data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+
+with autocast('cuda'):
+    outputs = model(
+        input_ids=input_ids,
+        attention_mask=attention_mask,
+        token_type_ids=token_type_ids,
+        labels=labels
+    )
+    loss = outputs.loss / ACCUMULATION_STEPS
+
+scaler.scale(loss).backward()
+```
+
+## TroubleShooting
+
+
 
 
 
