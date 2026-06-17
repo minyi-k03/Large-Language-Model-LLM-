@@ -25,7 +25,7 @@ df_remaining = df.drop(df_true_to_augment.index)
 # 남은 데이터 8000개 + 변형된 데이터 2000개 결합 (총 10,000개, 5000:5000 완벽 유지)
 df_augmented = pd.concat([df_remaining, df_true_to_augment], ignore_index=True)
 
+```
 
-**2. 메모리 최적화를 위한 동적 패딩 및 혼합 정밀도(AMP) 학습 **
 
 
