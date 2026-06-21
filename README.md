@@ -6,6 +6,7 @@ LLM(대형 언어 모델)의 이론적 배경을 학습하고, 다양한 오픈�
 ## 🛠 Tech Stack
 * **Frameworks:** LangChain, HuggingFace (Transformers, PEFT)
 * **Models:** LLaMA, Nexus Raven, OpenAI API
+* **Assist LLM** : Gemini
 
 ---
 
