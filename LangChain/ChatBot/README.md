@@ -65,8 +65,8 @@
 
  * **(해결)** : 메모리를 체인 내부에 결합하는 대신, RunnableWithMessageHistory Wrapper를 사용하여 대화 기록을 체인 외부에서 주입하는 방식으로 변경하여 해결하였다.
 
- **(Problem 4) CoversationRetrievalChain의 낮은 정확도**
+ * **(Problem 4) CoversationRetrievalChain의 낮은 정확도**
 
- **(해결)** : 질문 재구성(RePhrase)와 문서 기반 답변(QA) 두 단계 LCEL 파이프라인으로 명시적으로 분리하여 각 단계의 프롬프트와 로직을 제어하였다.
+ * **(해결)** : 질문 재구성(RePhrase)와 문서 기반 답변(QA) 두 단계 LCEL 파이프라인으로 명시적으로 분리하여 각 단계의 프롬프트와 로직을 제어하였다.
  
   
