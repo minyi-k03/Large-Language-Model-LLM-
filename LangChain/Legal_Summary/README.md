@@ -21,14 +21,14 @@
 
   **해결**: Gemini를 통해 pysqlite-3 binary를 설치하여 런타임시 강제로 모듈을 교체하였다.
 
-  '''
+  ```
   
   __import__('pysqlite3')
   import sys
   
   sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
   
-  '''
+  ```
 
   **3-2**:LangChain 패키지 구조 변경
 
