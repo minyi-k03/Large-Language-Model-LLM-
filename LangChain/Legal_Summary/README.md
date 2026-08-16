@@ -15,7 +15,7 @@
   **Embedding**:OpenAIEmbeddings
 
 ## 3. Trouble Shooting
-  **3-1**:SQLite3 버전 호환성 문제
+  **(Problem 1)**:SQLite3 버전 호환성 문제
 
   **원인**: Colab버젼과 현재 SQLite 버전 호환성 문제 발생
 
@@ -30,7 +30,7 @@
   
   ```
 
-  **3-2**:LangChain 패키지 구조 변경
+  **(Problem 2)**:LangChain 패키지 구조 변경
 
   **원인**:기존 강의 실습과 현재 랭체인 모듈의 버전이 달라 오류 발생
 
