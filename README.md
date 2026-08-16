@@ -24,10 +24,7 @@ LLM(대형 언어 모델)의 이론적 배경을 학습하고, 다양한 오픈�
 * LangChain 프레임워크를 활용한 프롬프트 엔지니어링 및 체인(Chain) 구성 실습
 * 외부 데이터 연동(RAG 등) 기초 구조 파악
 
-### 4. `nexus_raven`
-* 함수 호출(Function Calling)에 특화된 Nexus Raven 모델 활용 실습
-
-### 5. `openai-model`
+### 4. `openai-model`
 * OpenAI API를 활용한 기본적인 LLM 기능 연동 및 성능 평가 실습
 
 ---
