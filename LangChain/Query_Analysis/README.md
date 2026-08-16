@@ -29,5 +29,5 @@
   ```
 ## TroubleShooting
 
-  **문제1: Pydantic 버젼 문제 발생**
+  **(Problem 1): Pydantic 버젼 문제 발생**
   **해결**: Pydantic v2 라이브러리로 교체하여 안전성을 높였다
